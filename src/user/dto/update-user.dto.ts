@@ -8,22 +8,22 @@ export class UpdateUserDto {
     @IsString()
     @Transform(({ value }) => value.trim())
     @MinLength(3)
-    @ApiProperty({ example: "John Doe" })
+    @ApiProperty({ example: "Ibrohim Jo'raboyev" })
     fullname: string;
 
     @IsEmail()
     @IsNotEmpty()
     @Transform(({ value }) => value.trim())
-    @ApiProperty({ example: "john@gmail.com" })
+    @ApiProperty({ example: "ibrohimjoraboyev2008@gmail.com" })
     email: string;
 
     @IsString()
     @MinLength(5)
-    @ApiPropertyOptional({ example: "1234" })
+    @ApiPropertyOptional({ example: "12346" })
     password: string;
 
     @IsString()
-    @ApiPropertyOptional({ example: "photo_name.jpg" })
+    @ApiPropertyOptional({ example: "img.jpg" })
     @Transform(({ value }) => value.trim())
     photo: string;
 }
